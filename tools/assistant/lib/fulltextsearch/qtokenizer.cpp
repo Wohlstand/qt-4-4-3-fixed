@@ -8,11 +8,11 @@
 **
 ****************************************************************************/
 
-#include "qtokenizer_p.h"
-#include "qclucene_global_p.h"
-
 #include <CLucene.h>
 #include <CLucene/analysis/AnalysisHeader.h>
+
+#include "qtokenizer_p.h"
+#include "qclucene_global_p.h"
 
 QT_BEGIN_NAMESPACE
 

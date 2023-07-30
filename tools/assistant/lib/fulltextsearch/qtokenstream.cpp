@@ -8,10 +8,10 @@
 **
 ****************************************************************************/
 
-#include "qtokenstream_p.h"
-
 #include <CLucene.h>
 #include <CLucene/analysis/AnalysisHeader.h>
+
+#include "qtokenstream_p.h"
 
 QT_BEGIN_NAMESPACE
 
