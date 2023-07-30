@@ -175,6 +175,10 @@ extern int _lucene_counter_break; //can set a watch on this
  #error "Cannot compile in _ASCII without ctype.h"
 #endif
 
+#if defined(_CL_HAVE_WINDOWS_H)
+ #include <windows.h>
+#endif
+
 //always include replacement, some missing tchar defines
 #include "CLucene/config/repl_tchar.h"
 
@@ -188,10 +192,6 @@ extern int _lucene_counter_break; //can set a watch on this
  #include <fcntl.h>
 #else
  #error "Haven't implemented platforms with no fcntl.h"
-#endif
-
-#if defined(_CL_HAVE_WINDOWS_H)
- #include <windows.h>
 #endif
 
 #endif //LUCENE_DISABLE_INCLUDES
