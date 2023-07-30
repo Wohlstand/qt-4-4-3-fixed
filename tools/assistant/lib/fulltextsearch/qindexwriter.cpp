@@ -8,11 +8,11 @@
 **
 ****************************************************************************/
 
-#include "qindexwriter_p.h"
-#include "qindexreader_p.h"
-
 #include <CLucene.h>
 #include <CLucene/index/IndexWriter.h>
+
+#include "qindexwriter_p.h"
+#include "qindexreader_p.h"
 
 QT_BEGIN_NAMESPACE
 

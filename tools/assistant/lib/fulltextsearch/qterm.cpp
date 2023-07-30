@@ -8,11 +8,11 @@
 **
 ****************************************************************************/
 
-#include "qterm_p.h"
-#include "qclucene_global_p.h"
-
 #include <CLucene.h>
 #include <CLucene/index/IndexReader.h>
+
+#include "qterm_p.h"
+#include "qclucene_global_p.h"
 
 QT_BEGIN_NAMESPACE
 

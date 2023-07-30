@@ -8,12 +8,12 @@
 **
 ****************************************************************************/
 
+#include <CLucene.h>
+#include <CLucene/document/Field.h>
+
 #include "qfield_p.h"
 #include "qreader_p.h"
 #include "qclucene_global_p.h"
-
-#include <CLucene.h>
-#include <CLucene/document/Field.h>
 
 QT_BEGIN_NAMESPACE
 

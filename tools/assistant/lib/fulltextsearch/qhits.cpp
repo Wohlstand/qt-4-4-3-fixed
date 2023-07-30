@@ -8,10 +8,10 @@
 **
 ****************************************************************************/
 
-#include "qhits_p.h"
-
 #include <CLucene.h>
 #include <CLucene/search/SearchHeader.h>
+
+#include "qhits_p.h"
 
 QT_BEGIN_NAMESPACE
 

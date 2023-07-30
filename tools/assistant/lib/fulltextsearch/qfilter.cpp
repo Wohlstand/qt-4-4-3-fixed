@@ -8,10 +8,10 @@
 **
 ****************************************************************************/
 
-#include "qfilter_p.h"
-
 #include <CLucene.h>
 #include <CLucene/search/Filter.h>
+
+#include "qfilter_p.h"
 
 QT_BEGIN_NAMESPACE
 

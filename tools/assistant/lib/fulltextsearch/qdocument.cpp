@@ -8,13 +8,13 @@
 **
 ****************************************************************************/
 
-#include "qdocument_p.h"
-#include "qreader_p.h"
-#include "qclucene_global_p.h"
-
 #include <CLucene.h>
 #include <CLucene/util/Reader.h>
 #include <CLucene/document/Document.h>
+
+#include "qdocument_p.h"
+#include "qreader_p.h"
+#include "qclucene_global_p.h"
 
 QT_BEGIN_NAMESPACE
 

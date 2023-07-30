@@ -8,12 +8,12 @@
 **
 ****************************************************************************/
 
+#include <CLucene.h>
+#include <CLucene/queryParser/QueryParser.h>
+
 #include "qqueryparser_p.h"
 #include "qquery_p.h"
 #include "qclucene_global_p.h"
-
-#include <CLucene.h>
-#include <CLucene/queryParser/QueryParser.h>
 
 QT_BEGIN_NAMESPACE
 

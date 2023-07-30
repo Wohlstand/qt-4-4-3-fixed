@@ -8,12 +8,12 @@
 **
 ****************************************************************************/
 
-#include "qquery_p.h"
-#include "qclucene_global_p.h"
-
 #include <CLucene.h>
 #include <CLucene/search/PhraseQuery.h>
 #include <CLucene/search/SearchHeader.h>
+
+#include "qquery_p.h"
+#include "qclucene_global_p.h"
 
 QT_BEGIN_NAMESPACE
 
