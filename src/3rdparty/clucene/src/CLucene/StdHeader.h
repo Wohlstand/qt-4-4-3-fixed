@@ -152,6 +152,10 @@ extern int _lucene_counter_break; //can set a watch on this
  #define _snprintf snprintf
 #endif
 
+#if defined(_CL_HAVE_WINDOWS_H)
+ #include <windows.h>
+#endif
+
 #if defined(_UCS2)
  #if defined(_CL_HAVE_WCHAR_H)
     #include <wchar.h>
@@ -173,10 +177,6 @@ extern int _lucene_counter_break; //can set a watch on this
  #define LUCENE_USE_INTERNAL_CHAR_FUNCTIONS
 #else
  #error "Cannot compile in _ASCII without ctype.h"
-#endif
-
-#if defined(_CL_HAVE_WINDOWS_H)
- #include <windows.h>
 #endif
 
 //always include replacement, some missing tchar defines
