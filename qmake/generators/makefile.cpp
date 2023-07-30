@@ -1255,7 +1255,7 @@ MakefileGenerator::writeInstalls(QTextStream &t, const QString &installs, bool n
                        cmd = "-$(INSTALL_PROGRAM)";
                     else
                        cmd = "-$(INSTALL_FILE)";
-                    cmd += " " + wild + " " + dst_file + "\n";
+                    cmd += " \"" + wild + "\" \"" + dst_file + "\"\n";
                     target += cmd;
                     if(!project->isActiveConfig("debug") && !project->isActiveConfig("nostrip") &&
                        !fi.isDir() && fi.isExecutable() && !project->isEmpty("QMAKE_STRIP"))
