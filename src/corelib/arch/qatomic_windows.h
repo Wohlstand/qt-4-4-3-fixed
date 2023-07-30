@@ -384,11 +384,21 @@ Q_INLINE_TEMPLATE T *QBasicAtomicPointer<T>::fetchAndAddOrdered(qptrdiff valueTo
 #else
 
 extern "C" {
+#ifndef __INTRINSIC_SPECIAL__InterlockedCompareExchange
     __declspec(dllimport) long __stdcall InterlockedCompareExchange(long *, long, long);
+#endif
+#ifndef __INTRINSIC_SPECIAL__InterlockedIncrement
     __declspec(dllimport) long __stdcall InterlockedIncrement(long *);
+#endif
+#ifndef __INTRINSIC_SPECIAL__InterlockedDecrement
     __declspec(dllimport) long __stdcall InterlockedDecrement(long *);
+#endif
+#ifndef __INTRINSIC_SPECIAL__InterlockedExchange
     __declspec(dllimport) long __stdcall InterlockedExchange(long *, long);
+#endif
+#ifndef __INTRINSIC_SPECIAL__InterlockedExchangeAdd
     __declspec(dllimport) long __stdcall InterlockedExchangeAdd(long *, long);
+#endif
 }
 
 inline bool QBasicAtomicInt::ref()
