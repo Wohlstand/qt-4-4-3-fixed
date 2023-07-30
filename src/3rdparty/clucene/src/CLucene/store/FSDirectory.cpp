@@ -25,6 +25,10 @@ QT_USE_NAMESPACE
 #include "CLucene/util/Misc.h"
 #include "CLucene/debug/condition.h"
 
+#ifdef __MINGW32__
+#   define _mkdir mkdir
+#endif
+
 CL_NS_DEF(store)
 CL_NS_USE(util)
 
