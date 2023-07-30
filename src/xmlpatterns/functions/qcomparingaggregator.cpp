@@ -200,7 +200,7 @@ ComparingAggregator<oper, result>::typeCheck(const StaticContext::Ptr &context,
     if(!m_operands.first()->staticType()->cardinality().allowsMany())
         return m_operands.first();
 
-    prepareComparison(fetchComparator(t1, t1, context));
+    this->prepareComparison(fetchComparator(t1, t1, context));
 
     return me;
 }
