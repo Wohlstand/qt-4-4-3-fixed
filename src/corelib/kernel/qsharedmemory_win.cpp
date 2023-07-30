@@ -99,7 +99,7 @@ HANDLE QSharedMemoryPrivate::handle()
         if (safeKey.isEmpty()) {
             error = QSharedMemory::KeyError;
             errorString = QSharedMemory::tr("%1: unable to make key").arg(function);
-            return false;
+            return NULL;
         }
 #ifndef Q_OS_WINCE
     QT_WA({
@@ -115,7 +115,7 @@ HANDLE QSharedMemoryPrivate::handle()
 #endif
         if (!hand) {
             setErrorString(function);
-            return false;
+            return NULL;
         }
     }
     return hand;
