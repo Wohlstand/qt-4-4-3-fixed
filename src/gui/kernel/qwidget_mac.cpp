@@ -1198,7 +1198,7 @@ void qt_mac_unregister_widget()
 void QWidgetPrivate::toggleDrawers(bool visible)
 {
     for (int i = 0; i < children.size(); ++i) {
-        register QObject *object = children.at(i);
+        QObject *object = children.at(i);
         if (!object->isWidgetType())
             continue;
         QWidget *widget = static_cast<QWidget*>(object);

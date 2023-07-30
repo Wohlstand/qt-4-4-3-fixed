@@ -169,14 +169,14 @@ in this Software without prior written authorization from The Open Group.
 
 */
 static int
-qt_XTranslateKey(register QXCoreDesc *dpy,
+qt_XTranslateKey(QXCoreDesc *dpy,
                  KeyCode keycode,
-                 register unsigned int modifiers,
+                 unsigned int modifiers,
                  unsigned int *modifiers_return,
                  KeySym *keysym_return)
 {
     int per;
-    register KeySym *syms;
+    KeySym *syms;
     KeySym sym, lsym, usym;
 
     if (! dpy->keysyms)
@@ -1213,6 +1213,7 @@ static QString translateKeySym(KeySym keysym, uint xmodifiers,
 #if !defined(QT_NO_XIM)
             converted = keysymToUnicode(byte3, keysym & 0xff);
 #endif
+        // fallthrough
         case 0x20:
             // currency symbols
             if (keysym >= 0x20a0 && keysym <= 0x20ac) {

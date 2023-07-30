@@ -208,8 +208,8 @@ QPolygon::QPolygon(int nPoints, const int *points)
 
 void QPolygon::translate(int dx, int dy)
 {
-    register QPoint *p = data();
-    register int i = size();
+    QPoint *p = data();
+    int i = size();
     QPoint pt(dx, dy);
     while (i--) {
         *p += pt;
@@ -413,7 +413,7 @@ QRect QPolygon::boundingRect() const
 {
     if (isEmpty())
         return QRect(0, 0, 0, 0);
-    register const QPoint *pd = constData();
+    const QPoint *pd = constData();
     int minx, maxx, miny, maxy;
     minx = maxx = pd->x();
     miny = maxy = pd->y();
@@ -565,8 +565,8 @@ QPolygonF::QPolygonF(const QPolygon &a)
 
 void QPolygonF::translate(const QPointF &offset)
 {
-    register QPointF *p = data();
-    register int i = size();
+    QPointF *p = data();
+    int i = size();
     while (i--) {
         *p += offset;
         ++p;
@@ -601,7 +601,7 @@ QRectF QPolygonF::boundingRect() const
 {
     if (isEmpty())
         return QRectF(0, 0, 0, 0);
-    register const QPointF *pd = constData();
+    const QPointF *pd = constData();
     qreal minx, maxx, miny, maxy;
     minx = maxx = pd->x();
     miny = maxy = pd->y();

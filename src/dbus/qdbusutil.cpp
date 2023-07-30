@@ -47,7 +47,7 @@ QT_BEGIN_NAMESPACE
 
 static inline bool isValidCharacterNoDash(const QChar &c)
 {
-    register ushort u = c.unicode();
+    ushort u = c.unicode();
     return (u >= 'a' && u <= 'z')
             || (u >= 'A' && u <= 'Z')
             || (u >= '0' && u <= '9')
@@ -56,7 +56,7 @@ static inline bool isValidCharacterNoDash(const QChar &c)
 
 static inline bool isValidCharacter(const QChar &c)
 {
-    register ushort u = c.unicode();
+    ushort u = c.unicode();
     return (u >= 'a' && u <= 'z')
             || (u >= 'A' && u <= 'Z')
             || (u >= '0' && u <= '9')
@@ -65,7 +65,7 @@ static inline bool isValidCharacter(const QChar &c)
 
 static inline bool isValidNumber(const QChar &c)
 {
-    register ushort u = c.unicode();
+    ushort u = c.unicode();
     return (u >= '0' && u <= '9');
 }
 

@@ -1,3 +1,4 @@
+
 /****************************************************************************
 **
 ** Copyright (C) 2008 Nokia Corporation and/or its subsidiary(-ies).
@@ -472,7 +473,7 @@ bool QFontEngineWin::stringToCMap(const QChar *str, int len, QGlyphLayout *glyph
         QFixed overhang = 0;
 
         int glyph_pos = 0;
-        for(register int i = 0; i < len; i++) {
+        for(int i = 0; i < len; i++) {
             bool surrogate = (str[i].unicode() >= 0xd800 && str[i].unicode() < 0xdc00 && i < len-1
                               && str[i+1].unicode() >= 0xdc00 && str[i+1].unicode() < 0xe000);
             unsigned int glyph = glyphs[glyph_pos].glyph;
@@ -503,7 +504,7 @@ bool QFontEngineWin::stringToCMap(const QChar *str, int len, QGlyphLayout *glyph
         int glyph_pos = 0;
         HGDIOBJ oldFont = 0;
 
-        for(register int i = 0; i < len; i++) {
+        for(int i = 0; i < len; i++) {
             bool surrogate = (str[i].unicode() >= 0xd800 && str[i].unicode() < 0xdc00 && i < len-1
                               && str[i+1].unicode() >= 0xdc00 && str[i+1].unicode() < 0xe000);
             unsigned int glyph = glyphs[glyph_pos].glyph;
