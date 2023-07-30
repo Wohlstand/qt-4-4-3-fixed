@@ -1,0 +1,81 @@
+/****************************************************************************
+**
+** Copyright (C) 2008 Nokia Corporation and/or its subsidiary(-ies).
+** Contact: Qt Software Information (qt-info@nokia.com)
+**
+** This file is part of the documentation of the Qt Toolkit.
+**
+** Commercial Usage
+** Licensees holding valid Qt Commercial licenses may use this file in
+** accordance with the Qt Commercial License Agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and Nokia.
+**
+**
+** GNU General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU
+** General Public License versions 2.0 or 3.0 as published by the Free
+** Software Foundation and appearing in the file LICENSE.GPL included in
+** the packaging of this file.  Please review the following information
+** to ensure GNU General Public Licensing requirements will be met:
+** http://www.fsf.org/licensing/licenses/info/GPLv2.html and
+** http://www.gnu.org/copyleft/gpl.html.  In addition, as a special
+** exception, Nokia gives you certain additional rights. These rights
+** are described in the Nokia Qt GPL Exception version 1.3, included in
+** the file GPL_EXCEPTION.txt in this package.
+**
+** Qt for Windows(R) Licensees
+** As a special exception, Nokia, as the sole copyright holder for Qt
+** Designer, grants users of the Qt/Eclipse Integration plug-in the
+** right for the Qt/Eclipse Integration to link to functionality
+** provided by Qt Designer and its related libraries.
+**
+** If you are unsure which license is appropriate for your use, please
+** contact the sales department at qt-sales@nokia.com.
+**
+****************************************************************************/
+
+/*!
+    \page ipc.html
+    \title Inter-Process Communication in Qt
+    \ingroup architecture
+    \brief Inter-Process communication in Qt applications.
+
+    Qt provides several ways to implement Inter-Process Communication
+    (IPC) in Qt applications.
+
+    \list
+
+    \o \l{QtDBus}{D-Bus} The \l{QtDBus} module is a Unix-only library
+    you can use to implement IPC using the D-Bus protocol. It extends
+    Qt's \l{signalsandslots.html} {Signals and Slots} mechanism to the
+    IPC level, allowing a signal emitted by one process to be
+    connected to a slot in another process. This \l {Introduction to
+    D-Bus} page has detailed information on how to use the \l{QtDBus}
+    module.
+
+    \o \l{QtNetwork}{TCP/IP} The cross-platform \l{QtNetwork} module
+    provides classes that make network programming portable and
+    easy. It offers high-level classes (e.g. QHttp, QFtp) that
+    implement specific application-level protocols, and lower-level
+    classes (e.g. QTcpSocket, QTcpServer, QSslSocket) for implementing
+    protocols.
+
+    \o \l{QSharedMemory}{Shared Memory} The cross-platfrom shared
+    memory class (QSharedMemory) provides access to the operating
+    system's shared memory implementation. It allows safe access to
+    shared memory segments by multiple threads and processes.
+
+    \o \l{QCopChannel}{Qt COmmunications Protocol (QCOP)} The
+    QCopChannel class implements a protocol for transferring messages
+    between client processes across named channels. QCopChannel is
+    only available in \l {Qt for Embedded Linux}. Like the \l{QtDBus}
+    module, QCOP extends Qt's \l{signalsandslots.html} {Signals and
+    Slots} mechanism to the IPC level, allowing a signal emitted by
+    one process to be connected to a slot in another process, but
+    unlike QtDBus, QCOP does not depend on a 3rd party library.
+
+    \endlist
+
+*/
+

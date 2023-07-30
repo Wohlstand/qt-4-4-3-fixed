@@ -1,0 +1,96 @@
+/****************************************************************************
+**
+** Copyright (C) 2008 Nokia Corporation and/or its subsidiary(-ies).
+** Contact: Qt Software Information (qt-info@nokia.com)
+**
+** This file is part of the documentation of the Qt Toolkit.
+**
+** Commercial Usage
+** Licensees holding valid Qt Commercial licenses may use this file in
+** accordance with the Qt Commercial License Agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and Nokia.
+**
+**
+** GNU General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU
+** General Public License versions 2.0 or 3.0 as published by the Free
+** Software Foundation and appearing in the file LICENSE.GPL included in
+** the packaging of this file.  Please review the following information
+** to ensure GNU General Public Licensing requirements will be met:
+** http://www.fsf.org/licensing/licenses/info/GPLv2.html and
+** http://www.gnu.org/copyleft/gpl.html.  In addition, as a special
+** exception, Nokia gives you certain additional rights. These rights
+** are described in the Nokia Qt GPL Exception version 1.3, included in
+** the file GPL_EXCEPTION.txt in this package.
+**
+** Qt for Windows(R) Licensees
+** As a special exception, Nokia, as the sole copyright holder for Qt
+** Designer, grants users of the Qt/Eclipse Integration plug-in the
+** right for the Qt/Eclipse Integration to link to functionality
+** provided by Qt Designer and its related libraries.
+**
+** If you are unsure which license is appropriate for your use, please
+** contact the sales department at qt-sales@nokia.com.
+**
+****************************************************************************/
+
+/*!
+    \page known-issues.html
+    \title Known Issues in 4.4.3
+    \ingroup platform-notes
+
+    An up-to-date list of known issues with Qt 4.4.3 can be found via the
+    \l{Task Tracker} on the Qt website which provides additional information
+    about known issues and tasks related to Qt.
+
+    \section1 Issues with Third Party Software
+
+    \section2 X11 Hardware Support
+
+    \list
+    \o There is a bug in the 169.xx NVIDIA drivers on certain GeForce 8 series cards that is
+       triggered by the OpenGL paint engine when using QPainter on a QGLWidget to draw paths
+       and polygons. Some other painting operations that end up in the path fallback are
+       affected as well. The bug causes the whole X server to repeatedly hang for several
+       seconds at a time.
+    \o There is an issue with NVIDIA's 9xxx driver series on X11 that causes a crash in cases
+       where there are several \l{QGLContext}s and the extended composition modes are used (the
+       composition modes between and including QPainter::CompositionMode_Multiply and
+       QPainter::CompositionMode_Exclusion). This affects the composition mode demo in Qt 4.4,
+       for example. The crash does not occur in newer versions of the drivers.
+    \endlist
+
+    \section2 Windows Hardware Support
+
+    \list
+    \o When using version 6.14.11.6921 of the NVIDIA drivers for the GeForce 6600 GT under
+       Windows XP, Qt applications which use drag and drop will display reduced size pixmaps
+       when run alongside applications that use OpenGL. This problem can be worked around by
+       reducing the level of graphics acceleration provided by the driver, or by disabling
+       hardware acceleration completely.
+    \endlist
+
+    \section2 Windows Software Issues
+
+    \list
+    \o In Qt 4.4.0, when there is an accessibility client running, Assistant will crash when the
+    user creates a new tab page and Designer will crash when the user drags and drops certain
+    widgets (\gui{Column View} or \gui{Table Widget}, for example). This problem occurs with
+    any application that queries for an accessibility interface; for example, Microsoft Narrator
+    or Notepad++ (versions prior to 4.8.5) trigger these problems.
+
+    \o Under certain circumstances Visual Studio Integration v1.4.0 will not be able to install
+    the integration for Visual Studio 2005 on Windows Vista. An error message states that .NET
+    Framework v2.0 Service Pack 1 is not installed. This is due to a problem with the built-in
+    installation of this on Windows Vista. This issue can be fixed by installing .NET Framework
+    version 3.5.
+    \endlist
+
+    \section2 Mac OS X
+
+    \list
+    \o If a sheet is opened for a given window, clicking the title bar of that window will cause
+       it to flash. This behavior has been reported to Apple (bug number 5827676).
+    \endlist
+*/

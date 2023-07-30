@@ -1,0 +1,79 @@
+/****************************************************************************
+**
+** Copyright (C) 2008 Nokia Corporation and/or its subsidiary(-ies).
+** Contact: Qt Software Information (qt-info@nokia.com)
+**
+** This file is part of the documentation of the Qt Toolkit.
+**
+** Commercial Usage
+** Licensees holding valid Qt Commercial licenses may use this file in
+** accordance with the Qt Commercial License Agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and Nokia.
+**
+**
+** GNU General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU
+** General Public License versions 2.0 or 3.0 as published by the Free
+** Software Foundation and appearing in the file LICENSE.GPL included in
+** the packaging of this file.  Please review the following information
+** to ensure GNU General Public Licensing requirements will be met:
+** http://www.fsf.org/licensing/licenses/info/GPLv2.html and
+** http://www.gnu.org/copyleft/gpl.html.  In addition, as a special
+** exception, Nokia gives you certain additional rights. These rights
+** are described in the Nokia Qt GPL Exception version 1.3, included in
+** the file GPL_EXCEPTION.txt in this package.
+**
+** Qt for Windows(R) Licensees
+** As a special exception, Nokia, as the sole copyright holder for Qt
+** Designer, grants users of the Qt/Eclipse Integration plug-in the
+** right for the Qt/Eclipse Integration to link to functionality
+** provided by Qt Designer and its related libraries.
+**
+** If you are unsure which license is appropriate for your use, please
+** contact the sales department at qt-sales@nokia.com.
+**
+****************************************************************************/
+
+/*!
+    \example script/tetrix
+    \title QtScript Tetrix Example
+
+    The Tetrix example is a QtScript version of the classic Tetrix game.
+
+    \image tetrix-example.png
+
+    The program logic in this example is a fairly straight port of the
+    logic in the C++ \l{Tetrix Example}.
+    The graphical user interface is defined in a UI file.
+
+    \snippet examples/script/tetrix/main.cpp 0
+
+    We define a custom UI loader that handles our TetrixBoard widget; the
+    TetrixBoard is the main component of the UI (where the pieces are
+    drawn).
+
+    \snippet examples/script/tetrix/main.cpp 1
+
+    We initialize the script engine to have the Qt namespace, so that e.g.
+    Qt.Key_Left will be available to script code. We also make the
+    application object available (for the quit() slot).
+
+    \snippet examples/script/tetrix/main.cpp 2
+
+    Several scripts are evaluated as part of the engine setup process.
+    tetrixpiece.js contains the definition of the TetrixPiece class, which
+    is used to populate the play field. tetrixboard.js contains the
+    definition of the TetrixBoard class, which contains the main game logic.
+    Finally, tetrixwindow.js contains the definition of the TetrixWindow
+    class, which wires up the top-level widget.
+
+    \snippet examples/script/tetrix/main.cpp 3
+
+    A form is created from the UI file. A new TetrixWindow script object
+    is then constructed, passing the form as argument.
+
+    \snippet examples/script/tetrix/main.cpp 4
+
+    The form is shown, and the event loop is entered.
+*/
