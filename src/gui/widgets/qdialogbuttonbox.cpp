@@ -207,45 +207,45 @@ static const int layouts[2][5][14] =
     // Qt::Horizontal
     {
         // WinLayout
-        { ResetRole, Stretch, YesRole, AcceptRole, AlternateRole, DestructiveRole, NoRole, ActionRole, RejectRole, ApplyRole,
-           HelpRole, EOL, EOL, EOL },
+        { (int)ResetRole, (int)Stretch, (int)YesRole, (int)AcceptRole, (int)AlternateRole, (int)DestructiveRole, (int)NoRole, (int)ActionRole, (int)RejectRole, (int)ApplyRole,
+           (int)HelpRole, (int)EOL, (int)EOL, (int)EOL },
 
         // MacLayout
-        { HelpRole, ResetRole, ApplyRole, ActionRole, Stretch, DestructiveRole | Reverse,
-          AlternateRole | Reverse, RejectRole | Reverse, AcceptRole | Reverse, NoRole | Reverse, YesRole | Reverse, EOL, EOL },
+        { (int)HelpRole, (int)ResetRole, (int)ApplyRole, (int)ActionRole, (int)Stretch, (int)DestructiveRole | (int)Reverse,
+          (int)AlternateRole | (int)Reverse, (int)RejectRole | (int)Reverse, (int)AcceptRole | (int)Reverse, (int)NoRole | (int)Reverse, (int)YesRole | (int)Reverse, (int)EOL, (int)EOL },
 
         // KdeLayout
-        { HelpRole, ResetRole, Stretch, YesRole, NoRole, ActionRole, AcceptRole, AlternateRole,
-          ApplyRole, DestructiveRole, RejectRole, EOL },
+        { (int)HelpRole, (int)ResetRole, (int)Stretch, (int)YesRole, (int)NoRole, (int)ActionRole, (int)AcceptRole, (int)AlternateRole,
+          (int)ApplyRole, (int)DestructiveRole, (int)RejectRole, (int)EOL },
 
         // GnomeLayout
-        { HelpRole, ResetRole, Stretch, ActionRole, ApplyRole | Reverse, DestructiveRole | Reverse,
-          AlternateRole | Reverse, RejectRole | Reverse, AcceptRole | Reverse, NoRole | Reverse, YesRole | Reverse, EOL },
+        { (int)HelpRole, (int)ResetRole, (int)Stretch, (int)ActionRole, (int)ApplyRole | (int)Reverse, (int)DestructiveRole | (int)Reverse,
+          (int)AlternateRole | (int)Reverse, (int)RejectRole | (int)Reverse, (int)AcceptRole | (int)Reverse, (int)NoRole | (int)Reverse, (int)YesRole | (int)Reverse, (int)EOL },
 
         // Mac modeless
-        { ResetRole, ApplyRole, ActionRole, Stretch, HelpRole, EOL, EOL, EOL, EOL, EOL, EOL, EOL, EOL, EOL }
+        { (int)ResetRole, (int)ApplyRole, (int)ActionRole, (int)Stretch, (int)HelpRole, (int)EOL, (int)EOL, (int)EOL, (int)EOL, (int)EOL, (int)EOL, (int)EOL, (int)EOL, (int)EOL }
     },
 
     // Qt::Vertical
     {
         // WinLayout
-        { ActionRole, YesRole, AcceptRole, AlternateRole, DestructiveRole, NoRole, RejectRole, ApplyRole, ResetRole,
-          HelpRole, Stretch, EOL, EOL, EOL },
+        { (int)ActionRole, (int)YesRole, (int)AcceptRole, (int)AlternateRole, (int)DestructiveRole, (int)NoRole, (int)RejectRole, (int)ApplyRole, (int)ResetRole,
+          (int)HelpRole, (int)Stretch, (int)EOL, (int)EOL, (int)EOL },
 
         // MacLayout
-        { YesRole, NoRole, AcceptRole, RejectRole, AlternateRole, DestructiveRole, Stretch, ActionRole, ApplyRole,
-          ResetRole, HelpRole, EOL, EOL },
+        { (int)YesRole, (int)NoRole, (int)AcceptRole, (int)RejectRole, (int)AlternateRole, (int)DestructiveRole, (int)Stretch, (int)ActionRole, (int)ApplyRole,
+          (int)ResetRole, (int)HelpRole, (int)EOL, (int)EOL },
 
         // KdeLayout
-        { AcceptRole, AlternateRole, ApplyRole, ActionRole, YesRole, NoRole, Stretch, ResetRole,
-          DestructiveRole, RejectRole, HelpRole, EOL },
+        { (int)AcceptRole, (int)AlternateRole, (int)ApplyRole, (int)ActionRole, (int)YesRole, (int)NoRole, (int)Stretch, (int)ResetRole,
+          (int)DestructiveRole, (int)RejectRole, (int)HelpRole, (int)EOL },
 
         // GnomeLayout
-        { YesRole, NoRole, AcceptRole, RejectRole, AlternateRole, DestructiveRole, ApplyRole, ActionRole, Stretch,
-          ResetRole, HelpRole, EOL, EOL, EOL },
+        { (int)YesRole, (int)NoRole, (int)AcceptRole, (int)RejectRole, (int)AlternateRole, (int)DestructiveRole, (int)ApplyRole, (int)ActionRole, (int)Stretch,
+          (int)ResetRole, (int)HelpRole, (int)EOL, (int)EOL, (int)EOL },
 
         // Mac modeless
-        { ActionRole, ApplyRole, ResetRole, Stretch, HelpRole, EOL, EOL, EOL, EOL, EOL, EOL, EOL, EOL, EOL }
+        { (int)ActionRole, (int)ApplyRole, (int)ResetRole, (int)Stretch, (int)HelpRole, (int)EOL, (int)EOL, (int)EOL, (int)EOL, (int)EOL, (int)EOL, (int)EOL, (int)EOL, (int)EOL }
     }
 };
 

@@ -88,7 +88,7 @@ CL_NS_USE(util)
     _fpos = 0;
     path[0]=0;
   }
-  FSDirectory::FSIndexInput::SharedHandle::~SharedHandle() throw(CLuceneError&){
+  FSDirectory::FSIndexInput::SharedHandle::~SharedHandle() /*throw(CLuceneError&)*/{
     if ( fhandle >= 0 ){
       if ( _close(fhandle) != 0 )
         _CLTHROWA(CL_ERR_IO, "File IO Close error");
