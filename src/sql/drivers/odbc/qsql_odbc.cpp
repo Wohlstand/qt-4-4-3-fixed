@@ -64,13 +64,13 @@ QT_BEGIN_NAMESPACE
 #endif
 
 // newer platform SDKs use SQLLEN instead of SQLINTEGER
-#if defined(SQLLEN) || defined(Q_OS_WIN64)
+#if defined(SQLLEN) || defined(Q_OS_WIN64) || (SIZEOF_LONG_INT == 8)
 # define QSQLLEN SQLLEN
 #else
 # define QSQLLEN SQLINTEGER
 #endif
 
-#if defined(SQLULEN) || defined(Q_OS_WIN64)
+#if defined(SQLULEN) || defined(Q_OS_WIN64) || (SIZEOF_LONG_INT == 8)
 # define QSQLULEN SQLULEN
 #else
 # define QSQLULEN SQLUINTEGER

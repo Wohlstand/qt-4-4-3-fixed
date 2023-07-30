@@ -341,7 +341,7 @@ inline int QPathEdge::vertex(Direction direction) const
 
 inline bool QPathEdge::isBezier() const
 {
-    return bezier >= 0;
+    return bezier != 0;
 }
 
 inline QPathVertex::QPathVertex(const QPointF &p, int e)

@@ -122,7 +122,7 @@ static inline void qt_socket_getPortAndAddress(struct sockaddr *sa, quint16 *por
             *addr = tmpAddress;
 #ifndef QT_NO_IPV6IFNAME
             char scopeid[IFNAMSIZ];
-            if (::if_indextoname(sa6->sin6_scope_id, scopeid) > 0) {
+            if (::if_indextoname(sa6->sin6_scope_id, scopeid) != 0) {
                 addr->setScopeId(QLatin1String(scopeid));
             } else
 #endif

@@ -70,7 +70,7 @@ class QScriptEnginePrivate;
 template <class T>
 inline QScriptValue qscriptQMetaObjectConstructor(QScriptContext *, QScriptEngine *, T *)
 {
-    return 0;
+    return QScriptValue(0);
 }
 
 #endif // QT_NO_QOBJECT
